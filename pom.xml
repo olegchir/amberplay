@@ -1,8 +1,8 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>org.apache.amber</groupId>
+  <groupId>com.olegchir.playframework2</groupId>
   <artifactId>amberplay</artifactId>
-  <version>0.0.1</version>
+  <version>1-SNAPSHOT</version>
   
   <repositories>
   <repository>
@@ -11,6 +11,18 @@
     <url>http://repo.typesafe.com/typesafe/repo</url>
   </repository>
 </repositories>
+
+
+  <build>
+    <plugins>
+      <!-- http://blog.chintoju.com/2012/12/deploy-to-artifactory-remote-repository-using-maven.html -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-deploy-plugin</artifactId>
+        <version>2.7</version>
+      </plugin>
+    </plugins>
+  </build>
   
   <dependencies>
     <!--  dependency>
@@ -57,6 +69,21 @@
         </dependency>
 
   </dependencies>
+
+<distributionManagement>
+    <snapshotRepository>
+        <id>maven.olegchir.com</id>
+        <name>maven.olegchir.com-snapshots</name>
+        <url>http://maven.olegchir.com/artifactory/snapshots</url>
+    </snapshotRepository>
+    <snapshotRepository>
+        <id>maven.olegchir.com</id>
+        <name>maven.olegchir.com-releases</name>
+        <url>http://maven.olegchir.com/artifactory/releases</url>
+    </snapshotRepository>
+</distributionManagement>
+
+
   
   
 </project>
