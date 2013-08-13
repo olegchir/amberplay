@@ -1,66 +1,66 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>com.olegchir.playframework2</groupId>
-  <artifactId>amberplay</artifactId>
-  <version>1-SNAPSHOT</version>
-  
-  <repositories>
-  <repository>
-    <id>typesafe</id>
-    <name>typesafe-releases</name>
-    <url>http://repo.typesafe.com/typesafe/repo</url>
-  </repository>
-</repositories>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.olegchir.playframework2</groupId>
+    <artifactId>amberplay</artifactId>
+    <version>1-SNAPSHOT</version>
+
+    <repositories>
+        <repository>
+            <id>typesafe</id>
+            <name>typesafe-releases</name>
+            <url>http://repo.typesafe.com/typesafe/repo</url>
+        </repository>
+    </repositories>
 
 
-  <build>
-    <plugins>
-      <!-- http://blog.chintoju.com/2012/12/deploy-to-artifactory-remote-repository-using-maven.html -->
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-deploy-plugin</artifactId>
-        <version>2.7</version>
-      </plugin>
-    </plugins>
-  </build>
-  
-  <dependencies>
-    <!--  dependency>
-      <groupId>org.apache.amber</groupId>
-      <artifactId>amber-oauth2-common</artifactId>
-       <version>1.0</version>
-    </dependency-->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <version>2.7</version>
+            </plugin>
+        </plugins>
+    </build>
 
-    <dependency>
-      <groupId>org.codehaus.jettison</groupId>
-      <artifactId>jettison</artifactId>
-      <version>1.2</version>
-      <exclusions>
-        <exclusion>
-          <groupId>stax</groupId>
-          <artifactId>stax-api</artifactId>
-        </exclusion>
-      </exclusions>
-    </dependency>
-    
-    <dependency>
-      <groupId>org.slf4j</groupId>
-      <artifactId>slf4j-api</artifactId>
-      <version>1.6.1</version>
-    </dependency>
+    <dependencies>
+        <!--<dependency>
+          <groupId>org.apache.amber</groupId>
+          <artifactId>amber-oauth2-common</artifactId>
+           <version>1.0</version>
+        </dependency>-->
 
-    <dependency>
-      <groupId>org.slf4j</groupId>
-      <artifactId>slf4j-log4j12</artifactId>
-      <version>1.6.0</version>
-      <scope>test</scope>
-    </dependency>
-    
-    <dependency>
-	<groupId>org.scala-lang</groupId>
-	<artifactId>scala-library</artifactId>
-	<version>2.10.2</version>
-</dependency>
+        <dependency>
+            <groupId>org.codehaus.jettison</groupId>
+            <artifactId>jettison</artifactId>
+            <version>1.2</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>stax</groupId>
+                    <artifactId>stax-api</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.6.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>1.6.0</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.scala-lang</groupId>
+            <artifactId>scala-library</artifactId>
+            <version>2.10.2</version>
+        </dependency>
 
         <dependency>
             <groupId>play</groupId>
@@ -68,22 +68,20 @@
             <version>2.1.1</version>
         </dependency>
 
-  </dependencies>
+    </dependencies>
 
-<distributionManagement>
-    <snapshotRepository>
-        <id>maven.olegchir.com</id>
-        <name>maven.olegchir.com-snapshots</name>
-        <url>http://maven.olegchir.com/artifactory/snapshots</url>
-    </snapshotRepository>
-    <snapshotRepository>
-        <id>maven.olegchir.com</id>
-        <name>maven.olegchir.com-releases</name>
-        <url>http://maven.olegchir.com/artifactory/releases</url>
-    </snapshotRepository>
-</distributionManagement>
+    <distributionManagement>
+        <snapshotRepository>
+            <id>maven.olegchir.com</id>
+            <name>maven.olegchir.com-snapshots</name>
+            <url>http://maven.olegchir.com/artifactory/snapshots</url>
+        </snapshotRepository>
+        <repository>
+            <id>maven.olegchir.com</id>
+            <name>maven.olegchir.com-releases</name>
+            <url>http://maven.olegchir.com/artifactory/releases</url>
+        </repository>
+    </distributionManagement>
 
 
-  
-  
 </project>
